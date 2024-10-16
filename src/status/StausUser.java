@@ -5,30 +5,39 @@
  */
 package status;
 
+
+
 /**
  * MidTerm-Exam
  * @author srinivsi
  */
+enum StatusOf{
+REJECTED,
+PENDING,
+PROCESSING,
+APPROVED;
+}
+
 public class StausUser 
 {
-   public void statusDetail(String code)
+   public void statusDetail(StatusOf status)
 {
-switch(code.toUpperCase())
-        {
-        case "ZERO": System.out.println("REJECTED");
-        break;
-        case "ONE": System.out.println("PENDING");
-        break;
-        case "TWO":
-        System.out.println("PROCESSING");
-        break;
-        case "THREE": 
+    switch(status){
+        case REJECTED:
+            System.out.println("REJECTED");
+            break;
+        case PENDING:
+            System.out.println("PENDING");
+            break;
+        case PROCESSING:
+            System.out.println("PROCESSING");
+            break;
+         case APPROVED:
             System.out.println("APPROVED");
-        break;
-        default:
-         System.out.println("NOT VALID CODE");
-        break;
-        }
+            break;
+         default:
+             System.out.println("NOT VALID CODE");
+             break;
+    }
 }
- 
 }
